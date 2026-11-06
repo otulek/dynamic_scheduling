@@ -24,7 +24,11 @@ pays off.
 | `test_ozet.py` | Summary of the test runs: closed-loop differences, exactness coverage, open-loop measures, cost. |
 | `kayip_analizi.py` | Post-hoc analysis of one window (day 177): job-level decomposition, idle capacity, switching experiment, perturbed runs. |
 | `durum_anlik.py` | Machine occupancy and arrival-wave summaries at selected hours, from the outputs of `kayip_analizi.py`. |
-| `results/` | Result reports of the runs below. |
+| `requirements.txt` | Required Python packages. |
+| `tahmin_gonderim_rapor.txt` | Accuracy report of the submission-time estimates (step 1). |
+| `test_raporu.txt` | Summary report of the test runs with submission-time estimates (step 3). |
+| `kayip_raporu.txt` | Report of the day-177 analysis (step 5, `kayip_analizi.py`). |
+| `durum_raporu.txt` | Occupancy and arrival-wave report for day 177 (step 5, `durum_anlik.py`). |
 
 ## Data
 
