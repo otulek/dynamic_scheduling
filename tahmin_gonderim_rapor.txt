@@ -1,0 +1,72 @@
+Gonderim aninda tahmin (Algorithm 1; son 15 is, rezerv 900 sn). Gecmis: butun isler; tahmin: filtreli isler.
+walltime_limit <= 0 olan filtreli is: 0   tahmin <= 0 olan: 0
+Tahmin saniyeye yuvarlanmistir (en fazla 0,5 sn fark). Bu, ureticinin bir yeniden uygulamasidir; uretimdeki ilk tahminlerin birebir kopyasi degildir.
+
+==============================================================================
+A. TAM YIL (filtreli isler)
+==============================================================================
+is: 5,978,918
+gecmisi olmayan (tahmin = walltime_limit)       : %0.08
+gecmisi 15'ten az                               : %0.29
+  yilin ilk 30 gunu: is 1,175,208, gecmisi bos %0.23, 15'ten az %0.65  (gecmis izin basinda baslar)
+yuvarlamanin ayni zaman damgasinda yeni esitlik yarattigi gruplardaki is: 7
+soft_pred = walltime_limit                      : %10.15
+soft_kayit = walltime_limit                     : %19.10
+kayitli = uretilen (|fark| <= 1 sn)             : %11.09
+kayitli > uretilen (uzatma ya da baslangicta yeniden hesap): %28.81
+kayitli < uretilen                              : %60.10
+tahmin dogrulugu:
+  soft_pred (gonderim): oran = gercek / tahmin (n=5,978,918)
+  p05=0.00246  p25=0.03421  p50=0.2733  p75=0.8709  p95=5.737  ort=4.144
+    eksik tahmin (gercek > tahmin)      : %13.24
+    tahmin > 10 x gercek               : %36.39
+    gercek > 10 x tahmin               : %2.85
+    Spearman(gercek, tahmin)           : 0.481
+  soft_kayit (izdeki son deger): oran = gercek / tahmin (n=5,978,918)
+  p05=0.0005589  p25=0.03337  p50=0.2817  p75=0.8661  p95=1.67  ort=1.475
+    eksik tahmin (gercek > tahmin)      : %8.13
+    tahmin > 10 x gercek               : %35.89
+    gercek > 10 x tahmin               : %1.23
+    Spearman(gercek, tahmin)           : 0.421
+yarisan isler arasinda siralama (profile_windows.py ile ayni ornekleme, tohum 0):
+  ayni saat           soft_pred  : cift=5,808,911  tahmini esit=%47.4  farkli tahminlerde dogru siralama=%59.5
+  ayni saat           soft_kayit : cift=5,808,911  tahmini esit=%31.5  farkli tahminlerde dogru siralama=%58.5
+  ayni saat           walltime   : cift=5,808,911  tahmini esit=%78.3  farkli tahminlerde dogru siralama=%62.2
+  ayni zaman damgasi  soft_pred  : cift=4,840,015  tahmini esit=%98.3  farkli tahminlerde dogru siralama=%68.0
+  ayni zaman damgasi  soft_kayit : cift=4,840,015  tahmini esit=%69.8  farkli tahminlerde dogru siralama=%52.8
+  ayni zaman damgasi  walltime   : cift=4,840,015  tahmini esit=%98.5  farkli tahminlerde dogru siralama=%67.2
+
+==============================================================================
+B. SECILEN GUNLER (12 gun: 4, 75, 81, 126, 134, 170, 177, 186, 194, 201, 212, 344)
+==============================================================================
+is: 127,622
+gecmisi olmayan (tahmin = walltime_limit)       : %0.06
+gecmisi 15'ten az                               : %0.64
+  yilin ilk 30 gunu: is 15,720, gecmisi bos %0.43, 15'ten az %1.11  (gecmis izin basinda baslar)
+yuvarlamanin ayni zaman damgasinda yeni esitlik yarattigi gruplardaki is: 0
+soft_pred = walltime_limit                      : %15.37
+soft_kayit = walltime_limit                     : %16.37
+kayitli = uretilen (|fark| <= 1 sn)             : %13.32
+kayitli > uretilen (uzatma ya da baslangicta yeniden hesap): %22.71
+kayitli < uretilen                              : %63.97
+tahmin dogrulugu:
+  soft_pred (gonderim): oran = gercek / tahmin (n=127,622)
+  p05=0.001767  p25=0.03298  p50=0.3211  p75=0.8683  p95=3.712  ort=3.85
+    eksik tahmin (gercek > tahmin)      : %15.83
+    tahmin > 10 x gercek               : %35.28
+    gercek > 10 x tahmin               : %3.30
+    Spearman(gercek, tahmin)           : 0.422
+  soft_kayit (izdeki son deger): oran = gercek / tahmin (n=127,622)
+  p05=0.002197  p25=0.04845  p50=0.3316  p75=0.8637  p95=2.375  ort=2.037
+    eksik tahmin (gercek > tahmin)      : %12.53
+    tahmin > 10 x gercek               : %32.19
+    gercek > 10 x tahmin               : %3.04
+    Spearman(gercek, tahmin)           : 0.495
+yarisan isler arasinda siralama (profile_windows.py ile ayni ornekleme, tohum 0):
+  ayni saat           soft_pred  : cift=125,459  tahmini esit=%71.1  farkli tahminlerde dogru siralama=%63.7
+  ayni saat           soft_kayit : cift=125,459  tahmini esit=%43.1  farkli tahminlerde dogru siralama=%59.9
+  ayni saat           walltime   : cift=125,459  tahmini esit=%79.9  farkli tahminlerde dogru siralama=%71.1
+  ayni zaman damgasi  soft_pred  : cift=108,580  tahmini esit=%99.4  farkli tahminlerde dogru siralama=%73.6
+  ayni zaman damgasi  soft_kayit : cift=108,580  tahmini esit=%73.8  farkli tahminlerde dogru siralama=%51.3
+  ayni zaman damgasi  walltime   : cift=108,580  tahmini esit=%99.5  farkli tahminlerde dogru siralama=%70.6
+

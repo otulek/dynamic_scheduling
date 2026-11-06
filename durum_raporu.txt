@@ -1,0 +1,674 @@
+DURUM KARSILASTIRMASI: gun 177, tohum 0
+
+##############################################################################################################
+rho = 0.8   VM 1836 = sinif hiz 1: 918, hiz 1.5: 551, hiz 2: 367
+##############################################################################################################
+1. VM dolulugu ve kalan gercek is (kalan: T'de calisan isin gercek bitisine kadar, saat; 'bekleyen' satirinda mesgul sutunu = bekleyen is)
+  T = 10. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  918       0       0.0           0.0          0          0           0              NaN           NaN
+    ECT      1.5  551     551     100.0         225.6          3          0           0              0.4           0.6
+    ECT      2.0  367     367     100.0         287.0         25         19           1              0.2           0.6
+    ECT bekleyen <NA>     373       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  918       0       0.0           0.0          0          0           0              NaN           NaN
+agirlik      1.5  551     551     100.0         215.6          3          0           0              0.4           0.6
+agirlik      2.0  367     367     100.0         285.9         25         19           1              0.2           0.6
+agirlik bekleyen <NA>     372       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 11. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  918     918     100.0         624.2        271          1           0              0.4           1.6
+    ECT      1.5  551     551     100.0         461.1         84          3           3              0.8           1.0
+    ECT      2.0  367     367     100.0         555.3         44         40           8              0.5           4.5
+    ECT bekleyen <NA>    1664       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  918     918     100.0        1386.2        332         73           8              0.5           3.4
+agirlik      1.5  551     551     100.0         590.7        122         25           2              0.8           1.2
+agirlik      2.0  367     367     100.0         479.2         44         33           4              0.5           1.4
+agirlik bekleyen <NA>    1483       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 12. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  918     271      29.5         138.5          6          0           0              0.5           0.7
+    ECT      1.5  551     551     100.0         717.5        121         80           4              0.4           5.8
+    ECT      2.0  367     367     100.0        1004.7        209        156           6              1.4           4.6
+    ECT bekleyen <NA>     271       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  918     540      58.8        2192.4        346        183          11              1.6           8.9
+agirlik      1.5  551     400      72.6         260.6         32         25           2              0.2           0.9
+agirlik      2.0  367     285      77.7         329.4         35         28           3              0.2           3.8
+agirlik bekleyen <NA>       0       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 14. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  918      21       2.3           3.0          1          0           0              0.1           0.1
+    ECT      1.5  551     110      20.0         367.4         92          4           4              3.8           3.9
+    ECT      2.0  367     221      60.2        1243.7        180         44           9              2.3           8.2
+    ECT bekleyen <NA>       0       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  918     239      26.0        1452.9        207        183          11              6.8           6.9
+agirlik      1.5  551      26       4.7         106.5         25          2           2              3.3           3.4
+agirlik      2.0  367     110      30.0         895.3         52         35           8              0.7           9.0
+agirlik bekleyen <NA>       0       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 16. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  918     297      32.4        4873.7        275        234         214             16.0          29.9
+    ECT      1.5  551     551     100.0        5261.8        550        415         182              9.7          17.0
+    ECT      2.0  367     367     100.0        2200.5        244        169          33              3.7          10.4
+    ECT bekleyen <NA>     142       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  918     428      46.6        3142.7        401        357          81              4.9          14.8
+agirlik      1.5  551     551     100.0        6418.8        551        490         228             10.8          19.3
+agirlik      2.0  367     367     100.0        4486.4        366        336         111              9.0          17.5
+agirlik bekleyen <NA>       6       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 17. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  918     918     100.0        6198.7        763        366         206              3.2          19.5
+    ECT      1.5  551     551     100.0        4712.6        471        390         149              8.7          16.0
+    ECT      2.0  367     367     100.0        2181.1        313        162          31              3.2           9.4
+    ECT bekleyen <NA>     375       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  918     918     100.0        4011.0        787        291          69              3.7          10.3
+agirlik      1.5  551     551     100.0        5867.8        525        474         195              9.8          18.3
+agirlik      2.0  367     367     100.0        4122.8        362        316          98              8.0          16.5
+agirlik bekleyen <NA>     660       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 18. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  918     918     100.0        5743.2        730        297         194              2.8          18.5
+    ECT      1.5  551     551     100.0        4237.8        470        373         120              7.7          15.0
+    ECT      2.0  367     367     100.0        1904.4        277        134          11              2.2           8.4
+    ECT bekleyen <NA>    6986       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  918     918     100.0        3484.5        764        228          57              2.8           9.3
+agirlik      1.5  551     551     100.0        5365.6        529        453         165              8.8          17.3
+agirlik      2.0  367     367     100.0        3767.4        362        292          67              7.0          15.5
+agirlik bekleyen <NA>    7409       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 20. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  918     918     100.0        6782.1        562        307         210              1.8          23.1
+    ECT      1.5  551     551     100.0        4662.2        458        393         128              7.2          17.2
+    ECT      2.0  367     367     100.0        3085.2        268        178          80              3.6          22.8
+    ECT bekleyen <NA>    5825       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  918     918     100.0        5517.7        583        244         123              1.8          17.0
+agirlik      1.5  551     551     100.0        4776.6        515        426         131              7.3          17.1
+agirlik      2.0  367     367     100.0        3395.2        338        216          58              5.6          14.4
+agirlik bekleyen <NA>    7203       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+2. Dolulugun kaynagi: T'de mesgul VM'ler, calisan isin gelis saati grubuna gore (>= 300 is; digerleri 'diger')
+  T = 10. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          1                  0.3        5               28.2
+agirlik           8        0                0.0          0                  0.0        5               28.2
+    ECT           9        0                0.0        550                225.3      358              247.8
+agirlik           9        0                0.0        551                215.6      358              246.7
+    ECT       diger        0                0.0          0                  0.0        4               11.0
+agirlik       diger        0                0.0          0                  0.0        4               11.0
+
+  T = 11. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        5               23.2
+agirlik           8        0                0.0          0                  0.0        5               23.2
+    ECT           9        0                0.0         10                  2.0       20              145.9
+agirlik           9       42               12.3          3                  1.1       18              145.3
+    ECT          10      918              624.2        541                459.1      340              377.7
+agirlik          10      876             1373.8        548                589.6      342              302.3
+    ECT       diger        0                0.0          0                  0.0        2                8.4
+agirlik       diger        0                0.0          0                  0.0        2                8.4
+
+  T = 12. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        4               19.1
+agirlik           8        0                0.0          0                  0.0        4               19.0
+    ECT           9        0                0.0          0                  0.0       25              129.8
+agirlik           9        1                0.4          0                  0.0       17              128.1
+    ECT          10      271              138.5        549                702.4      331              834.3
+agirlik          10      530             2139.6        400                260.6      262              174.2
+    ECT       diger        0                0.0          2                 15.1        7               21.6
+agirlik       diger        9               52.3          0                  0.0        2                8.1
+
+  T = 14. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2               13.3
+agirlik           8        0                0.0          0                  0.0        2               13.3
+    ECT           9        0                0.0          0                  0.0       16               95.9
+agirlik           9        0                0.0          0                  0.0       16               95.9
+    ECT          10        2                1.8         85                331.8      141              438.9
+agirlik          10      235             1411.3         26                106.5       14               91.9
+    ECT          13        0                0.0          0                  0.0       56              310.4
+agirlik          13        0                0.0          0                  0.0       56              310.4
+    ECT       diger       19                1.1         25                 35.6        6              385.2
+agirlik       diger        4               41.6          0                  0.0       22              383.7
+
+  T = 16. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                9.3
+agirlik           8        0                0.0          0                  0.0        2                9.3
+    ECT           9        0                0.0          0                  0.0       16               63.9
+agirlik           9        0                0.0          0                  0.0       16               63.9
+    ECT          10        0                0.0         79                171.3      136              159.4
+agirlik          10      181             1003.1         25                 55.5        9               65.3
+    ECT          13        0                0.0          0                  0.0        7              279.1
+agirlik          13        0                0.0          0                  0.0        7              279.1
+    ECT          14      234             4776.6        469               5078.1      197             1299.3
+agirlik          14      177             2001.0        526               6363.3      325             3328.0
+    ECT       diger       63               97.1          3                 12.4        9              389.5
+agirlik       diger       70              138.6          0                  0.0        8              740.8
+
+  T = 17. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                7.3
+agirlik           8        0                0.0          0                  0.0        2                7.3
+    ECT           9        0                0.0          0                  0.0       16               47.9
+agirlik           9        0                0.0          0                  0.0       16               47.9
+    ECT          10        0                0.0         79                 92.3       17              109.6
+agirlik          10      181              822.1         25                 30.5        9               56.3
+    ECT          13        0                0.0          0                  0.0        7              272.1
+agirlik          13        0                0.0          0                  0.0        7              272.1
+    ECT          14      234             4542.6        469               4609.1      217             1250.1
+agirlik          14      175             1825.4        526               5837.3      326             3005.4
+    ECT          16      643             1604.2          1                  1.1      103              110.9
+agirlik          16      517             1276.0          0                  0.0        0                0.0
+    ECT       diger       41               51.9          2                 10.0        5              383.1
+agirlik       diger       45               87.5          0                  0.0        7              733.8
+
+  T = 18. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                5.3
+agirlik           8        0                0.0          0                  0.0        2                5.3
+    ECT           9        0                0.0          0                  0.0       14               33.5
+agirlik           9        0                0.0          0                  0.0       14               33.5
+    ECT          10        0                0.0          3                 26.9       17               92.6
+agirlik          10      181              641.1          2                 21.0        9               47.3
+    ECT          13        0                0.0          0                  0.0        7              265.1
+agirlik          13        0                0.0          0                  0.0        7              265.1
+    ECT          14      234             4308.6        466               4140.5      216             1033.1
+agirlik          14      175             1650.4        523               5311.7      326             2679.4
+    ECT          16      604             1354.6          8                 18.2       92               78.2
+agirlik          16      518             1149.7         26                 33.0        5                7.2
+    ECT          17       39               69.1         73                 43.5       14               18.5
+    ECT       diger       41               10.9          1                  8.7        5              378.1
+agirlik       diger       44               43.2          0                  0.0        4              729.6
+
+  T = 20. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                1.3
+agirlik           8        0                0.0          0                  0.0        2                1.3
+    ECT           9        0                0.0          0                  0.0        3               13.9
+agirlik           9        0                0.0          0                  0.0        3               13.9
+    ECT          10        0                0.0          3                 20.9       17               58.6
+agirlik          10      180              279.2          2                 17.0        9               29.3
+    ECT          13        0                0.0          0                  0.0        7              251.1
+agirlik          13        0                0.0          0                  0.0        7              251.1
+    ECT          14      234             3840.6        411               3251.1      157              648.4
+agirlik          14      175             1300.4        488               4295.4      313             2032.9
+    ECT          16      326              412.7          4                  5.8        6                2.9
+agirlik          16      445              761.6         39                 51.9       13               10.1
+    ECT          17      291              333.7         70                 30.9       66               10.4
+agirlik          17       21                7.3          2                  0.6        0                0.0
+    ECT          18       67             2195.2         62               1346.7      106             1727.6
+agirlik          18       95             3141.1         20                411.8       18              332.3
+    ECT       diger        0                0.0          1                  6.7        3              370.8
+agirlik       diger        2               28.0          0                  0.0        2              724.3
+
+3. Gelis dalgalarinin siniflara dagilimi (>= 300 is); vmsaat_hiz: o sinifta tuketilen VM-saat (islem suresi toplami); calisan@T: o saatte hala calisan is
+ dalga_saati  yontem   is  ort_bekleme_sn  ort_islem_sn  ilk_baslama_sa  son_baslama_sa  pay_hiz1_%  vmsaat_hiz1  pay_hiz1.5_%  vmsaat_hiz1.5  pay_hiz2_%  vmsaat_hiz2  calisan@10  calisan@11  calisan@12  calisan@14  calisan@16  calisan@17  calisan@18  calisan@20
+           8     ECT  893             0.0         710.7             8.0             9.0         0.0          0.0          39.5           66.5        60.5        109.8         6.0         5.0         4.0         2.0         2.0         2.0         2.0           2
+           8 agirlik  893             0.0         704.5             8.0             9.0         0.0          0.0          39.6           60.3        60.4        114.4         5.0         5.0         4.0         2.0         2.0         2.0         2.0           2
+           9     ECT 2532           141.8        1231.2             9.0            11.6         0.0          0.0          50.7          369.1        49.3        496.8       908.0        30.0        25.0        16.0        16.0        16.0        14.0           3
+           9 agirlik 2532            10.3        1390.2             9.0            10.0        14.5        249.6          47.4          317.1        38.0        411.0       909.0        63.0        18.0        16.0        16.0        16.0        14.0           3
+          10     ECT 4473          1970.6        3654.5            10.0            12.7        41.9       1534.2          30.7         1562.9        27.3       1443.6         0.0      1799.0      1151.0       228.0       215.0        96.0        20.0          20
+          10 agirlik 4473          1643.6        4367.0            10.0            11.9        48.4       3518.4          24.5         1135.7        27.1        771.9         0.0      1766.0      1192.0       275.0       215.0       215.0       192.0         191
+          13     ECT  672             0.0        1793.5            13.0            14.0         0.0          0.0          51.9            4.6        48.1        330.2         NaN         NaN         NaN        56.0         7.0         7.0         7.0           7
+          13 agirlik  672             0.0        1795.1            13.0            14.0         0.0          0.0          31.0            5.8        69.0        329.3         NaN         NaN         NaN        56.0         7.0         7.0         7.0           7
+          14     ECT 1203          3237.9       42914.5            14.0            23.6        20.0       5128.7          39.1         5770.9        41.0       3441.0         NaN         NaN         NaN         NaN       900.0       920.0       916.0         802
+          14 agirlik 1203           212.5       39667.6            14.0            25.4        15.5       2267.0          43.7         7154.3        40.8       3834.3         NaN         NaN         NaN         NaN      1028.0      1027.0      1024.0         976
+          16     ECT 2123           773.9        4683.9            16.1            23.6        85.1       2485.2           1.0           22.3        13.9        254.7         NaN         NaN         NaN         NaN         NaN       747.0       704.0         336
+          16 agirlik 2123          2357.0        4952.7            16.0            25.4        93.3       2742.2           4.7          142.5         2.0         36.0         NaN         NaN         NaN         NaN         NaN       517.0       549.0         497
+          17     ECT 7014         14380.4        1786.3            17.7            23.4        52.6       2350.7          19.8          584.3        27.6        545.4         NaN         NaN         NaN         NaN         NaN         NaN       126.0         427
+          17 agirlik 7014         21895.1        1876.1            18.8            25.4        62.9       2769.7          16.2          446.1        20.9        439.6         NaN         NaN         NaN         NaN         NaN         NaN         0.0          23
+          18     ECT  356          5946.0       56589.3            18.0            23.8        18.8       2275.3          18.5         1415.9        62.6       1904.8         NaN         NaN         NaN         NaN         NaN         NaN         NaN         235
+          18 agirlik  356         10263.9       72150.7            18.8            25.4        48.9       5691.6          11.0          738.7        40.2        704.6         NaN         NaN         NaN         NaN         NaN         NaN         NaN         133
+
+##############################################################################################################
+rho = 1.2   VM 1224 = sinif hiz 1: 612, hiz 1.5: 367, hiz 2: 245
+##############################################################################################################
+1. VM dolulugu ve kalan gercek is (kalan: T'de calisan isin gercek bitisine kadar, saat; 'bekleyen' satirinda mesgul sutunu = bekleyen is)
+  T = 10. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  612     184      30.1         126.3         22          0           0              0.6           1.1
+    ECT      1.5  367     367     100.0         136.5          1          0           0              0.4           0.5
+    ECT      2.0  245     245     100.0         261.3         25         19           1              0.2           1.1
+    ECT bekleyen <NA>     503       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  612     182      29.7         104.8          8          0           0              0.5           0.8
+agirlik      1.5  367     367     100.0         144.7          1          0           0              0.4           0.6
+agirlik      2.0  245     245     100.0         258.1         25         19           1              0.2           1.1
+agirlik bekleyen <NA>     506       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 11. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  612     612     100.0         600.0        315          0           0              1.2           1.8
+    ECT      1.5  367     367     100.0         340.6         78          3           3              0.8           1.1
+    ECT      2.0  245     245     100.0         485.6         42         39           6              0.6           8.4
+    ECT bekleyen <NA>    3161       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  612     612     100.0         956.8        457         11           6              1.6           1.9
+agirlik      1.5  367     367     100.0         404.9         68          8           7              0.8           1.1
+agirlik      2.0  245     245     100.0         391.4         34         29           4              0.6           5.5
+agirlik bekleyen <NA>    2988       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 12. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  612     612     100.0         499.9         96          5           0              0.6           2.2
+    ECT      1.5  367     367     100.0         385.4         65         36           3              0.3           2.7
+    ECT      2.0  245     245     100.0         859.2        141        133           5              4.5           7.4
+    ECT bekleyen <NA>    1530       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  612     612     100.0        1192.6        188         65           6              0.7           7.6
+agirlik      1.5  367     367     100.0         496.4         57         53          10              0.3           6.0
+agirlik      2.0  245     245     100.0         697.2        129        122           4              3.7           4.8
+agirlik bekleyen <NA>    1667       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 14. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  612     127      20.8          92.3         38          0           0              0.5           1.8
+    ECT      1.5  367     216      58.9         549.3        110         91           7              1.1           4.8
+    ECT      2.0  245     245     100.0         635.0        166         37           2              2.5           5.7
+    ECT bekleyen <NA>      50       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  612     225      36.8         625.8         97         62           6              0.7           7.3
+agirlik      1.5  367     167      45.5         369.4         75         41           7              0.4           4.1
+agirlik      2.0  245     231      94.3        1083.7        133         30           8              2.2           5.3
+agirlik bekleyen <NA>       0       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 16. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  612     596      97.4       11554.2        572        550         509             17.7          32.7
+    ECT      1.5  367     367     100.0        2181.4        352        189          46              4.1          12.7
+    ECT      2.0  245     245     100.0        1501.6        139         78          19              1.4           9.3
+    ECT bekleyen <NA>     167       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  612     607      99.2        8009.0        583        540         284             11.3          26.1
+agirlik      1.5  367     367     100.0        4771.1        355        309         175             11.4          24.2
+agirlik      2.0  245     245     100.0        2156.7        143        120          40              3.6          13.3
+agirlik bekleyen <NA>     146       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 17. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  612     612     100.0       11050.7        593        556         488             16.5          31.4
+    ECT      1.5  367     367     100.0        1858.5        348        150          35              3.1          11.9
+    ECT      2.0  245     245     100.0        1458.0        169         74          21              2.0           8.6
+    ECT bekleyen <NA>    1399       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  612     612     100.0        7474.9        599        531         269             10.2          25.0
+agirlik      1.5  367     367     100.0        4474.3        348        316         163             10.4          23.2
+agirlik      2.0  245     245     100.0        2144.1        194        114          40              3.3          12.4
+agirlik bekleyen <NA>    1403       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 18. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  612     612     100.0       10502.8        582        556         455             15.5          30.4
+    ECT      1.5  367     367     100.0        1527.7        261        122          31              2.2          10.9
+    ECT      2.0  245     245     100.0        1340.8        151         68          20              1.3           7.6
+    ECT bekleyen <NA>    8211       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  612     612     100.0        6902.4        570        443         247              9.2          24.0
+agirlik      1.5  367     367     100.0        4135.8        329        313         144              9.4          22.2
+agirlik      2.0  245     245     100.0        1993.8        178        103          17              2.5          11.4
+agirlik bekleyen <NA>    8277       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 20. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  612     612     100.0        9407.2        594        551         363             13.5          28.4
+    ECT      1.5  367     367     100.0        1250.3        257         84          28              2.0           8.9
+    ECT      2.0  245     245     100.0        1195.9        152         32          19              1.3           5.6
+    ECT bekleyen <NA>    7859       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  612     612     100.0        5891.9        579        373         215              7.2          22.0
+agirlik      1.5  367     367     100.0        3533.6        338        294         118              7.4          20.2
+agirlik      2.0  245     245     100.0        1745.7        163         67          14              1.8           9.4
+agirlik bekleyen <NA>    8231       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+2. Dolulugun kaynagi: T'de mesgul VM'ler, calisan isin gelis saati grubuna gore (>= 300 is; digerleri 'diger')
+  T = 10. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        1                1.2          0                  0.0        5               28.2
+agirlik           8        0                0.0          1                  0.3        5               28.2
+    ECT           9      179              121.9        367                136.5      236              222.1
+agirlik           9      182              104.8        366                144.4      236              218.9
+    ECT          10        4                3.2          0                  0.0        0                0.0
+    ECT       diger        0                0.0          0                  0.0        4               11.0
+agirlik       diger        0                0.0          0                  0.0        4               11.0
+
+  T = 11. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        1                0.2          0                  0.0        5               23.2
+agirlik           8        0                0.0          0                  0.0        5               23.2
+    ECT           9       20                6.1          2                  0.9       19              145.5
+agirlik           9       94               29.1          2                  0.3       18              145.3
+    ECT          10      591              593.7        365                339.6      219              308.4
+agirlik          10      518              927.7        365                404.6      220              214.4
+    ECT       diger        0                0.0          0                  0.0        2                8.4
+agirlik       diger        0                0.0          0                  0.0        2                8.4
+
+  T = 12. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        4               19.1
+agirlik           8        0                0.0          0                  0.0        4               19.1
+    ECT           9        0                0.0         61                 13.8       17              128.2
+agirlik           9        6                1.3          0                  0.0       17              128.1
+    ECT          10      612              499.9        306                371.6      215              689.7
+agirlik          10      606             1191.3        363                466.7      218              538.9
+    ECT       diger        0                0.0          0                  0.0        9               22.2
+agirlik       diger        0                0.0          4                 29.7        6               11.2
+
+  T = 14. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2               13.3
+agirlik           8        0                0.0          0                  0.0        2               13.3
+    ECT           9        0                0.0          0                  0.0       17               96.0
+agirlik           9        0                0.0          0                  0.0       16               95.9
+    ECT          10      127               92.3        135                431.0      207              479.3
+agirlik          10      215              621.2         90                288.8      197              312.3
+    ECT          13        0                0.0         55                 93.1       11               16.1
+agirlik          13        5                4.3         58                 33.3        6              287.0
+    ECT       diger        0                0.0         26                 25.3        8               30.4
+agirlik       diger        5                0.3         19                 47.3       10              375.1
+
+  T = 16. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                9.3
+agirlik           8        0                0.0          0                  0.0        2                9.3
+    ECT           9        0                0.0          0                  0.0       16               63.9
+agirlik           9        0                0.0          0                  0.0       16               63.9
+    ECT          10        5                0.8         87                242.8      129              195.3
+agirlik          10       66              404.1         51                177.4      103               84.0
+    ECT          13        0                0.0          5                 78.8        2              224.3
+agirlik          13        0                0.0         11                  8.8        6              275.0
+    ECT          14      550            11498.8        262               1843.9       75              599.6
+agirlik          14      484             7485.9        298               4556.9      104              978.1
+    ECT       diger       41               54.6         13                 15.9       21              409.1
+agirlik       diger       57              119.0          7                 28.0       14              746.3
+
+  T = 17. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                7.3
+agirlik           8        0                0.0          0                  0.0        2                7.3
+    ECT           9        0                0.0          0                  0.0       16               47.9
+agirlik           9        0                0.0          0                  0.0       16               47.9
+    ECT          10        0                0.0         86                156.3       31              114.1
+agirlik          10       63              340.8         51                126.4        6               41.9
+    ECT          13        0                0.0          5                 73.8        2              222.3
+agirlik          13        0                0.0          1                  5.2        6              269.0
+    ECT          14      550            10948.8        251               1602.2       77              558.6
+agirlik          14      482             7003.3        304               4310.8      111              942.4
+    ECT          16       40               74.3         14                 21.9      104              115.6
+agirlik          16       29               58.9          6                  9.3       95              100.2
+    ECT       diger       22               27.6         11                  4.3       13              392.2
+agirlik       diger       38               71.8          5                 22.6        9              735.3
+
+  T = 18. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                5.3
+agirlik           8        0                0.0          0                  0.0        2                5.3
+    ECT           9        0                0.0          0                  0.0       14               33.5
+agirlik           9        0                0.0          0                  0.0       14               33.5
+    ECT          10        0                0.0         86                 70.3       17               92.1
+agirlik          10       62              278.4         37                 76.9        6               35.9
+    ECT          13        0                0.0          5                 68.8        2              220.3
+agirlik          13        0                0.0          1                  4.2        6              263.0
+    ECT          14      550            10398.8        249               1351.6       73              483.8
+agirlik          14      482             6521.3        304               4006.8      111              831.4
+    ECT          16       41               97.6         27                 37.0      131              120.2
+agirlik          16       31               68.1         22                 28.9      103               94.6
+    ECT       diger       21                6.4          0                  0.0        6              385.6
+agirlik       diger       37               34.6          3                 19.0        3              730.1
+
+  T = 20. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                1.3
+agirlik           8        0                0.0          0                  0.0        2                1.3
+    ECT           9        0                0.0          0                  0.0        3               13.9
+agirlik           9        0                0.0          0                  0.0        3               13.9
+    ECT          10        0                0.0          3                 23.6       17               58.1
+agirlik          10       61              154.5          8                 59.5        6               23.9
+    ECT          13        0                0.0          5                 58.8        2              216.3
+agirlik          13        0                0.0          1                  2.2        6              251.0
+    ECT          14      550             9298.8        182                897.8       52              354.3
+agirlik          14      478             5558.7        304               3398.8      108              610.7
+    ECT          16       62              108.4        177                270.1      165              175.7
+agirlik          16       72              159.6         52                 60.1      118              119.8
+    ECT       diger        0                0.0          0                  0.0        4              376.3
+agirlik       diger        1               19.1          2                 13.0        2              725.0
+
+3. Gelis dalgalarinin siniflara dagilimi (>= 300 is); vmsaat_hiz: o sinifta tuketilen VM-saat (islem suresi toplami); calisan@T: o saatte hala calisan is
+ dalga_saati  yontem   is  ort_bekleme_sn  ort_islem_sn  ilk_baslama_sa  son_baslama_sa  pay_hiz1_%  vmsaat_hiz1  pay_hiz1.5_%  vmsaat_hiz1.5  pay_hiz2_%  vmsaat_hiz2  calisan@10  calisan@11  calisan@12  calisan@14  calisan@16  calisan@17  calisan@18  calisan@20
+           8     ECT  893             0.2         761.9             8.0             9.0        12.0         25.7          41.5           65.9        46.5         97.4         6.0         6.0         4.0         2.0         2.0         2.0         2.0           2
+           8 agirlik  893             0.2         751.5             8.0             9.0        12.1         17.9          41.4           71.1        46.5         97.4         6.0         5.0         4.0         2.0         2.0         2.0         2.0           2
+           9     ECT 2532          1024.6        1326.6             9.0            13.1        13.8        131.2          47.4          375.0        38.7        426.8       782.0        41.0        78.0        17.0        16.0        16.0        14.0           3
+           9 agirlik 2532            64.8        1519.1             9.0            10.5        33.6        442.3          39.2          294.5        27.3        331.6       784.0       114.0        23.0        16.0        16.0        16.0        14.0           3
+          10     ECT 4473          4148.7        3872.8            10.0            14.3        54.4       2110.4          26.6         1495.8        18.9       1205.9         4.0      1175.0      1133.0       469.0       221.0       117.0       103.0          20
+          10 agirlik 4473          4790.6        3986.7            10.0            13.9        37.4       2425.1          34.3         1431.9        28.2       1096.4         0.0      1103.0      1187.0       502.0       220.0       120.0       105.0          75
+          13     ECT  672            31.7        1957.6            13.0            14.3        68.9         12.1          23.2          103.0         7.9        250.3         NaN         NaN         NaN        66.0         7.0         7.0         7.0           7
+          13 agirlik  672            61.1        1901.9            13.0            14.0        56.2         19.8          32.3           45.9        11.5        289.3         NaN         NaN         NaN        69.0        17.0         7.0         7.0           7
+          14     ECT 1203          7114.5       51307.0            14.0            31.3        46.0      12326.4          35.7         2593.6        18.4       2225.1         NaN         NaN         NaN         NaN       887.0       878.0       872.0         784
+          14 agirlik 1203          6571.7       47793.0            14.0            30.8        41.0       8213.8          37.7         6121.6        21.3       1635.4         NaN         NaN         NaN         NaN       886.0       897.0       897.0         890
+          16     ECT 2123          6411.8        3164.0            16.0            29.6        30.0        331.8          25.3          743.9        44.7        790.2         NaN         NaN         NaN         NaN         NaN       158.0       199.0         404
+          16 agirlik 2123          8587.3        3392.5            16.0            30.2        26.1        823.2          10.7          300.1        63.1        877.3         NaN         NaN         NaN         NaN         NaN       130.0       156.0         242
+          17     ECT 7014         32602.9        1411.8            20.9            29.6        10.7        446.7          51.5         1473.6        37.8        830.5         NaN         NaN         NaN         NaN         NaN         NaN         0.0           0
+          17 agirlik 7014         38014.4        1608.1            22.2            30.7        35.8       1520.3          30.3          856.1        33.9        756.8         NaN         NaN         NaN         NaN         NaN         NaN         0.0           0
+          18     ECT  356         20962.3       51968.6            20.8            31.8         7.9        884.0          31.2         2370.9        61.0       1884.3         NaN         NaN         NaN         NaN         NaN         NaN         NaN           0
+          18 agirlik  356         23477.4       59914.1            21.3            30.8        29.2       3145.8          12.1          990.1        58.7       1788.9         NaN         NaN         NaN         NaN         NaN         NaN         NaN           0
+
+##############################################################################################################
+rho = 2.0   VM 734 = sinif hiz 1: 367, hiz 1.5: 220, hiz 2: 147
+##############################################################################################################
+1. VM dolulugu ve kalan gercek is (kalan: T'de calisan isin gercek bitisine kadar, saat; 'bekleyen' satirinda mesgul sutunu = bekleyen is)
+  T = 10. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  367     367     100.0         241.9         42          0           0              0.6           1.0
+    ECT      1.5  220     220     100.0          80.1          0          0           0              0.4           0.5
+    ECT      2.0  147     147     100.0         216.7         23         19           1              0.2           8.8
+    ECT bekleyen <NA>     628       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  367     367     100.0         256.6         67          0           0              0.7           1.3
+agirlik      1.5  220     220     100.0          81.0          0          0           0              0.4           0.4
+agirlik      2.0  147     147     100.0         229.7         25         19           1              0.2           8.8
+agirlik bekleyen <NA>     635       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 11. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  367     367     100.0         537.2        308          0           0              1.7           2.0
+    ECT      1.5  220     220     100.0         231.3         25          6           4              0.8           1.0
+    ECT      2.0  147     147     100.0         429.9         40         36           6              0.7          10.4
+    ECT bekleyen <NA>    4235       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  367     367     100.0         694.5        268         19           5              1.7           2.2
+agirlik      1.5  220     220     100.0         294.8         33          9           7              0.8           1.1
+agirlik      2.0  147     147     100.0         311.3         31         27           3              0.5           8.4
+agirlik bekleyen <NA>    4283       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 12. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  367     367     100.0         307.9         85          0           0              0.8           1.7
+    ECT      1.5  220     220     100.0         313.1        166          7           5              1.2           1.4
+    ECT      2.0  147     147     100.0         407.8         45         33           5              0.8           9.4
+    ECT bekleyen <NA>    3395       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  367     367     100.0         678.7        160         26           6              0.9           2.8
+agirlik      1.5  220     220     100.0         741.5        161         84           7              1.3           6.4
+agirlik      2.0  147     147     100.0         313.0         32         28           2              0.7           7.4
+agirlik bekleyen <NA>    3389       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 14. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  367     367     100.0         571.8        134         33           1              0.5           3.3
+    ECT      1.5  220     220     100.0         677.0        102         98           8              0.5           6.1
+    ECT      2.0  147     147     100.0         605.5        119         97           3              4.6           8.1
+    ECT bekleyen <NA>    2072       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  367     367     100.0         976.5        166         77           6              0.9           8.5
+agirlik      1.5  220     220     100.0         753.6        143        126           7              4.3           5.7
+agirlik      2.0  147     147     100.0         285.8         43         28           5              0.1           6.1
+agirlik bekleyen <NA>    2436       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 16. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  367     367     100.0        4227.5        322        278         130              7.9          25.9
+    ECT      1.5  220     220     100.0        1295.9        208        128          18              4.1          11.1
+    ECT      2.0  147     147     100.0         575.1        131         37          10              2.6           9.2
+    ECT bekleyen <NA>    2463       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  367     367     100.0        3715.7        323        267         132              6.6          22.9
+agirlik      1.5  220     220     100.0        1373.6        209         77          42              3.3          17.9
+agirlik      2.0  147     147     100.0         956.8        140         83          25              4.7          13.7
+agirlik bekleyen <NA>    2806       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 17. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  367     367     100.0        4122.5        319        288         139              7.6          24.9
+    ECT      1.5  220     220     100.0        1092.7        208         84          14              3.1          10.1
+    ECT      2.0  147     147     100.0         441.3        123         33           9              1.6           8.2
+    ECT bekleyen <NA>    3954       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  367     367     100.0        3532.0        312        271         125              6.4          21.9
+agirlik      1.5  220     220     100.0        1165.6        202         72          38              2.3          16.9
+agirlik      2.0  147     147     100.0         814.6        125         70          23              3.7          12.7
+agirlik bekleyen <NA>    4331       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 18. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  367     367     100.0        3893.4        325        274         133              6.8          23.9
+    ECT      1.5  220     220     100.0         903.7        215         75          13              2.1           9.1
+    ECT      2.0  147     147     100.0         332.0         55         31           2              0.7           7.2
+    ECT bekleyen <NA>   10758       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  367     367     100.0        3327.5        328        262         113              5.4          20.9
+agirlik      1.5  220     220     100.0         980.3        123         67          34              1.7          15.9
+agirlik      2.0  147     147     100.0         713.3        121         67          14              2.9          11.7
+agirlik bekleyen <NA>   11113       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+  T = 20. saat
+ yontem      hiz   VM  mesgul  mesgul_%  kalan_vmsaat  kalan>1sa  kalan>4sa  kalan>12sa  kalan_medyan_sa  kalan_p90_sa
+    ECT      1.0  367     367     100.0        3359.5        347        202         122              4.9          21.9
+    ECT      1.5  220     220     100.0         659.7        147         51          12              2.0           7.1
+    ECT      2.0  147     147     100.0         270.1         70         16           1              0.9           5.2
+    ECT bekleyen <NA>   10673       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+agirlik      1.0  367     367     100.0        2779.4        332        183          81              4.0          18.9
+agirlik      1.5  220     220     100.0         906.5        153         60          25              1.9          13.9
+agirlik      2.0  147     147     100.0         538.8         99         44           7              1.9           9.7
+agirlik bekleyen <NA>   10982       NaN           NaN       <NA>       <NA>        <NA>              NaN           NaN
+
+2. Dolulugun kaynagi: T'de mesgul VM'ler, calisan isin gelis saati grubuna gore (>= 300 is; digerleri 'diger')
+  T = 10. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        1                1.2          0                  0.0        5               28.2
+agirlik           8        0                0.0          1                  0.3        5               28.2
+    ECT           9      366              240.7        220                 80.1      138              177.5
+agirlik           9      367              256.6        219                 80.7      138              190.5
+    ECT       diger        0                0.0          0                  0.0        4               11.0
+agirlik       diger        0                0.0          0                  0.0        4               11.0
+
+  T = 11. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        1                0.2          0                  0.0        5               23.2
+agirlik           8        0                0.0          0                  0.0        5               23.2
+    ECT           9       41                9.2          6                  0.9       21              146.1
+agirlik           9       71               18.6          2                  0.7       18              145.4
+    ECT          10      325              527.8        214                230.4      119              252.2
+agirlik          10      296              675.9        218                294.1      122              134.3
+    ECT       diger        0                0.0          0                  0.0        2                8.4
+agirlik       diger        0                0.0          0                  0.0        2                8.4
+
+  T = 12. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        4               19.1
+agirlik           8        0                0.0          0                  0.0        4               19.1
+    ECT           9        1                0.4          0                  0.0       17              128.4
+agirlik           9        0                0.0          0                  0.0       17              128.1
+    ECT          10      366              307.5        219                298.4      121              251.4
+agirlik          10      365              655.3        220                741.5      122              157.1
+    ECT       diger        0                0.0          1                 14.7        5                8.9
+agirlik       diger        2               23.5          0                  0.0        4                8.7
+
+  T = 14. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2               13.3
+agirlik           8        0                0.0          0                  0.0        2               13.3
+    ECT           9        4                0.4         88                 22.5       16               95.9
+agirlik           9      112               37.8          0                  0.0       79              104.9
+    ECT          10      339              547.1        101                560.6       82              442.4
+agirlik          10      199              826.1        186                681.7       23              106.7
+    ECT          13       23                4.1         28                 74.3        9               15.9
+agirlik          13        3                0.5         26                 47.0       39               54.0
+    ECT       diger        1               20.2          3                 19.6       38               38.0
+agirlik       diger       53              112.1          8                 24.9        4                6.9
+
+  T = 16. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                9.3
+agirlik           8        0                0.0          0                  0.0        2                9.3
+    ECT           9        0                0.0          0                  0.0       16               63.9
+agirlik           9        1                0.8          0                  0.0       16               63.9
+    ECT          10       80              239.5         94                370.9       87              303.2
+agirlik          10       93              548.5        125                409.7       17               68.6
+    ECT          13        0                0.0          5                 61.1        1               13.0
+agirlik          13        0                0.0         11                 21.1        4               43.6
+    ECT          14      251             3913.7        117                847.7       18              165.4
+agirlik          14      200             3027.3         74                916.7       98              758.1
+    ECT       diger       36               74.3          4                 16.2       23               20.3
+agirlik       diger       73              139.2         10                 26.0       10               13.4
+
+  T = 17. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                7.3
+agirlik           8        0                0.0          0                  0.0        2                7.3
+    ECT           9        0                0.0          0                  0.0       16               47.9
+agirlik           9        0                0.0          0                  0.0       16               47.9
+    ECT          10       47              177.3         94                276.9       87              216.2
+agirlik          10       81              462.6        125                284.7       13               52.4
+    ECT          13        0                0.0          4                 56.7        1               12.0
+agirlik          13        0                0.0          1                 17.1        4               39.6
+    ECT          14      264             3878.6        107                736.9       17              148.4
+agirlik          14      207             2944.2         74                842.7       98              660.1
+    ECT          16       32               19.1         12                  9.2       13                4.4
+agirlik          16       34               38.4         10                  3.1        7                3.1
+    ECT       diger       24               47.4          3                 12.9       11                5.0
+agirlik       diger       45               86.8         10                 18.0        7                4.2
+
+  T = 18. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                5.3
+agirlik           8        0                0.0          0                  0.0        2                5.3
+    ECT           9        0                0.0          0                  0.0       14               33.5
+agirlik           9        0                0.0          0                  0.0       14               33.5
+    ECT          10       32              142.2         92                184.3       87              129.2
+agirlik          10       76              385.0        123                161.2        7               41.5
+    ECT          13        0                0.0          4                 52.7        1               11.0
+agirlik          13        0                0.0          1                 16.1        4               35.6
+    ECT          14      260             3617.1        107                629.9       17              131.4
+agirlik          14      198             2742.6         74                768.7       96              562.9
+    ECT          16       53              108.9         15                 26.2       25               20.4
+agirlik          16       65              148.2         19                 22.7       23               33.5
+    ECT       diger       22               25.2          2                 10.6        1                1.1
+agirlik       diger       28               51.7          3                 11.6        1                1.1
+
+  T = 20. saat
+ yontem gelis_grubu  vm_hiz1  kalan_vmsaat_hiz1  vm_hiz1.5  kalan_vmsaat_hiz1.5  vm_hiz2  kalan_vmsaat_hiz2
+    ECT           8        0                0.0          0                  0.0        2                1.3
+agirlik           8        0                0.0          0                  0.0        2                1.3
+    ECT           9        0                0.0          0                  0.0        3               13.9
+agirlik           9        0                0.0          0                  0.0        3               13.9
+    ECT          10       32               78.2         30                 30.4       15               53.9
+agirlik          10       75              233.1          8                 60.3        7               27.5
+    ECT          13        0                0.0          4                 44.7        1                9.0
+agirlik          13        0                0.0          1                 14.1        4               27.6
+    ECT          14      258             3097.6         93                421.3       16               98.0
+agirlik          14      198             2346.6         66                626.3       67              401.9
+    ECT          16       76              169.5         92                156.6      110               93.9
+agirlik          16       92              165.9        143                198.2       64               66.7
+    ECT       diger        1               14.2          1                  6.7        0                0.0
+agirlik       diger        2               33.8          2                  7.5        0                0.0
+
+3. Gelis dalgalarinin siniflara dagilimi (>= 300 is); vmsaat_hiz: o sinifta tuketilen VM-saat (islem suresi toplami); calisan@T: o saatte hala calisan is
+ dalga_saati  yontem   is  ort_bekleme_sn  ort_islem_sn  ilk_baslama_sa  son_baslama_sa  pay_hiz1_%  vmsaat_hiz1  pay_hiz1.5_%  vmsaat_hiz1.5  pay_hiz2_%  vmsaat_hiz2  calisan@10  calisan@11  calisan@12  calisan@14  calisan@16  calisan@17  calisan@18  calisan@20
+           8     ECT  893             0.2         894.1             8.0             9.0        39.4         99.4          25.2           49.7        35.4         72.7         6.0         6.0         4.0         2.0         2.0         2.0         2.0           2
+           8 agirlik  893             0.2         880.8             8.0             9.0        39.5         89.7          25.1           55.8        35.4         73.0         6.0         5.0         4.0         2.0         2.0         2.0         2.0           2
+           9     ECT 2532          6867.4        1492.8             9.0            51.1        56.7        385.7          24.7          333.7        18.6        330.6       724.0        68.0        18.0       108.0        16.0        16.0        14.0           3
+           9 agirlik 2532          6592.8        1513.2             9.0            47.4        61.6        472.8          13.3          217.0        25.0        374.5       724.0        91.0        17.0       191.0        17.0        16.0        14.0           3
+          10     ECT 4473         53179.2        4058.2            10.0            51.0        55.0       2521.3          29.3         1595.3        15.7        925.7         0.0       658.0       706.0       522.0       261.0       228.0       211.0          77
+          10 agirlik 4473         63738.3        3978.0            10.0            50.3        30.3       2231.3          32.1         1776.8        37.6        934.6         0.0       636.0       707.0       408.0       235.0       219.0       206.0          90
+          13     ECT  672          3064.3        1931.2            13.0            51.1        32.4         11.4          47.0           84.6        20.5        264.5         NaN         NaN         NaN        60.0         6.0         5.0         5.0           5
+          13 agirlik  672           878.2        1878.6            13.0            49.9        29.8          4.2          27.5           59.8        42.7        286.7         NaN         NaN         NaN        68.0        15.0         5.0         5.0           5
+          14     ECT 1203         43043.9       48925.8            14.0            50.1        47.4      10125.5          34.2         3812.4        18.4       2411.5         NaN         NaN         NaN         NaN       386.0       388.0       384.0         367
+          14 agirlik 1203         43681.2       48773.4            14.0            49.7        50.7       9959.2          21.8         3941.4        27.5       2397.9         NaN         NaN         NaN         NaN       372.0       379.0       368.0         331
+          16     ECT 2123         10420.7        3508.8            16.0            46.9        36.5        777.9          27.3          665.0        36.2        626.3         NaN         NaN         NaN         NaN         NaN        57.0        93.0         278
+          16 agirlik 2123         10314.0        3730.6            16.1            34.2        33.6        959.5          42.2          824.9        24.3        415.6         NaN         NaN         NaN         NaN         NaN        51.0       107.0         299
+          17     ECT 7014         44230.3        1646.4            22.7            33.8        35.9       1549.8          38.0         1095.5        26.2        562.5         NaN         NaN         NaN         NaN         NaN         NaN         0.0           0
+          17 agirlik 7014         46433.4        1658.1            22.6            34.4        38.8       1672.8          33.5          940.1        27.7        617.5         NaN         NaN         NaN         NaN         NaN         NaN         0.0           0
+          18     ECT  356         45833.5       56728.2            22.7            51.1        31.5       1983.7          37.6         2054.0        30.9       1572.0         NaN         NaN         NaN         NaN         NaN         NaN         NaN           0
+          18 agirlik  356         44933.0       58871.6            22.5            49.9        21.1       2389.4          57.0         2090.6        21.9       1341.8         NaN         NaN         NaN         NaN         NaN         NaN         NaN           0
+
