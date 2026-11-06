@@ -1,0 +1,486 @@
+Genelleme birimi PENCEREDIR. Bir pencerede birden fazla tohum varsa once pencere icinde ortalama
+alinir; pencereler arasi ozet (medyan, en kucuk, en buyuk, kac pencerede daha iyi, Wilcoxon
+isaretli siralar testi) bu pencere degerleri uzerinden yapilir. Wilcoxon p degeri aciklayici
+amaclidir: coklu karsilastirma duzeltmesi yapilmaz, pencere sayisi kucuktur.
+
+Olcutler (kapali dongu, pencerede gelen butun isler uzerinden ortalama):
+  akis    = bitis - gelis            (ana olcut; planlayicinin tahmini amaci bunun karsiligidir)
+  bekleme = baslama - gelis
+  islem   = bitis - baslama          (akis = bekleme + islem)
+  bsld    = bounded slowdown = max(1, akis / max(islem, 10 sn))   (ikincil olcut)
+Fark: (yontem - referans) / referans * 100; negatif = yontem daha iyi (dort olcutte de kucuk iyidir).
+
+Kesinlik kapsami:
+  kesin_geri_dusus_% : kesin planli kosuda, bekleyen is --cap'i astigi icin kesin cozulmeyen karar orani
+  kesin_K_%          : kesin cozulen kararlarda K yuva sinirinin baglayici oldugu oran
+  kesin_guvenilir    : ikisi de %1'in altinda; kesin plan karsilastirmasi yalniz bu hucrelerde "kesin
+                       plan" anlamina gelir, digerlerinde kismidir
+  acik_kesin_cozulen_%: acik dongu olcumunde (ECT gidisati) kesin referansi olan karar orani
+
+==============================================================================================================
+YUK rho = 0.8   (pencere sayisi 12)
+==============================================================================================================
+1. Ortalama akis suresi (sn)
+ gun    is    vm  ECT_akis  agirlik_akis  yerel_akis  kesin_akis  fcfs_akis
+   4 15720 14989   44968.0       44952.0     44952.0     44968.0    44968.0
+  75  8273  1664   12068.0       11902.0     11892.0     11891.0    11823.0
+  81  7703  3748   28851.0       28863.0     28864.0     28850.0    28851.0
+ 126 11826  1769   23935.0       23960.0     24035.0     23953.0    24832.0
+ 134 11744 31736  126083.0      126083.0    126083.0    126083.0   126083.0
+ 170  6782  2036   17781.0       17918.0     17922.0     17830.0    17933.0
+ 177 19826  1836   12009.0       14960.0     14952.0     14903.0    12622.0
+ 186  5131  5365   55856.0       55138.0     55138.0     55133.0    55386.0
+ 194 14957   758    4588.0        4552.0      4556.0      4546.0     4569.0
+ 201 13553   782    3663.0        3623.0      3634.0      3623.0     3672.0
+ 212  7028  1051   16749.0       17029.0     17017.0     17083.0    22510.0
+ 344  5079  2560   28751.0       28755.0     28755.0     28756.0    28753.0
+
+2.akis  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_akis_%  fark_yerel_vs_ECT_akis_%  fark_kesin_vs_ECT_akis_%  fark_fcfs_vs_ECT_akis_%
+   4                       -0.03                     -0.03                      0.00                     0.00
+  75                       -1.38                     -1.46                     -1.47                    -2.03
+  81                        0.04                      0.04                     -0.01                    -0.00
+ 126                        0.11                      0.42                      0.07                     3.75
+ 134                        0.00                      0.00                      0.00                     0.00
+ 170                        0.77                      0.79                      0.28                     0.85
+ 177                       24.57                     24.50                     24.10                     5.11
+ 186                       -1.28                     -1.28                     -1.29                    -0.84
+ 194                       -0.78                     -0.70                     -0.91                    -0.41
+ 201                       -1.07                     -0.79                     -1.08                     0.27
+ 212                        1.68                      1.60                      1.99                    34.40
+ 344                        0.01                      0.01                      0.02                     0.01
+
+2.bekleme  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_bekleme_%  fark_yerel_vs_ECT_bekleme_%  fark_kesin_vs_ECT_bekleme_%  fark_fcfs_vs_ECT_bekleme_%
+   4                           0.00                         0.00                         0.00                        0.00
+  75                         -20.55                       -21.22                       -15.24                      -23.91
+  81                          -8.00                        -7.66                        -3.45                       -2.48
+ 126                           0.19                         0.50                         0.03                        6.12
+ 134                            NaN                          NaN                          NaN                         NaN
+ 170                         -18.20                       -18.23                        -7.07                       -3.56
+ 177                          44.05                        43.87                        43.31                        2.27
+ 186                         -70.02                       -70.02                       -65.34                      -58.82
+ 194                          -2.68                        -2.58                        -3.15                       -1.79
+ 201                          -5.82                        -4.27                        -5.82                        0.97
+ 212                           1.77                         2.41                         1.74                       77.76
+ 344                           1.36                         1.36                        -0.34                        1.27
+
+2.islem  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_islem_%  fark_yerel_vs_ECT_islem_%  fark_kesin_vs_ECT_islem_%  fark_fcfs_vs_ECT_islem_%
+   4                        -0.03                      -0.03                       0.00                      0.00
+  75                         0.56                       0.53                      -0.08                      0.17
+  81                         0.04                       0.05                      -0.00                      0.00
+ 126                        -0.03                       0.30                       0.13                      0.04
+ 134                         0.00                       0.00                       0.00                      0.00
+ 170                         1.54                       1.56                       0.57                      1.03
+ 177                         5.31                       5.35                       5.10                      7.91
+ 186                         1.45                       1.45                       1.25                      1.46
+ 194                         0.24                       0.32                       0.31                      0.33
+ 201                         0.04                       0.03                       0.03                      0.11
+ 212                         1.60                       0.97                       2.19                      0.34
+ 344                         0.01                       0.01                       0.02                      0.00
+
+2.bsld  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_bsld_%  fark_yerel_vs_ECT_bsld_%  fark_kesin_vs_ECT_bsld_%  fark_fcfs_vs_ECT_bsld_%
+   4                       -0.00                     -0.00                      0.00                     0.00
+  75                       79.25                     58.05                     69.90                     8.68
+  81                       -1.89                     -1.66                     -0.82                    -0.86
+ 126                        6.65                      4.87                      4.96                     7.47
+ 134                        0.00                      0.00                      0.00                     0.00
+ 170                      -19.90                    -20.00                    -15.34                   -19.55
+ 177                       23.58                     25.06                     28.04                    10.69
+ 186                      -38.21                    -38.21                    -38.76                   -38.54
+ 194                       -4.58                     -3.24                     -8.64                    -0.07
+ 201                       -0.24                     -1.70                     -4.88                     2.41
+ 212                        1.67                      2.16                      4.65                    97.94
+ 344                        1.83                      1.83                     -0.66                     1.79
+
+3. Kesinlik kapsami
+ gun  kesin_geri_dusus_%  kesin_K_%  kesin_guvenilir  acik_kesin_cozulen_%  acik_bekleyen_medyan
+   4                2.24       0.00            False                 97.76                  12.0
+  75               26.48       0.00            False                 79.38                 317.0
+  81                0.16       0.00             True                 99.84                  11.0
+ 126               82.67       0.00            False                 14.91                3409.0
+ 134                0.00       0.00             True                100.00                   5.0
+ 170               21.31       0.00            False                 79.24                  92.0
+ 177               81.00       0.72            False                 25.49                1465.5
+ 186                0.00       0.00             True                100.00                 140.0
+ 194               61.96       0.00            False                 37.09                 971.0
+ 201               49.74       0.00            False                 49.77                 605.0
+ 212               79.72       0.00            False                 23.10                1235.0
+ 344                0.00       0.00             True                100.00                  19.0
+
+4. Acik dongu (ECT gidisatindaki ayni karar durumlari)
+ gun  acik_tahmini_pay_kesin_%  acik_kapatma_agirlik_%  acik_kapatma_yerel_%  acik_optimal_agirlik_%  acik_optimal_yerel_%  acik_kalan_agirlik_%  acik_gercek_agirlik_%  acik_gercek_yerel_%  acik_gercek_kesin_%  acik_buyuk_pay_agirlik_%  acik_ms_hizli_ort  acik_ms_agirlik_ort  acik_ms_yerel_ort  acik_ms_kesin_ort
+   4                     0.000                 -40.000               -40.000                 100.000               100.000                 0.000                  0.019                0.019                0.000                     0.000              3.067                0.377              3.105              0.179
+  75                     3.258                  98.767                99.633                  63.881                78.284                 0.042                  3.121                3.001                3.025                     1.819              0.789                3.148             69.031            543.597
+  81                     0.038                  98.104               100.000                  98.450               100.000                 0.001                 -0.102               -0.095               -0.006                     0.000              0.847                0.260              2.300              3.510
+ 126                     1.727                  99.590               100.000                  81.408               100.000                 0.007                  2.119                2.116                2.217                     0.074              4.134               28.575           1296.257             86.746
+ 134                     0.000                     NaN                   NaN                 100.000               100.000                 0.000                  0.000                0.000                0.000                       NaN              6.395                0.197              0.831              0.186
+ 170                     2.334                  96.281                96.292                  67.651                67.712                 0.089                  0.700                0.706                1.268                     4.695              0.728                2.633             49.877             31.612
+ 177                     1.181                  99.934                99.993                  80.781                96.784                 0.001                  8.024                8.027                8.016                     1.359              2.944               19.038           1138.331            177.302
+ 186                     4.465                 100.000               100.000                 100.000               100.000                -0.000                  5.790                5.790                6.111                       NaN              1.359                0.803              8.505             29.668
+ 194                     0.306                  97.562                99.988                  78.511                99.736                 0.007                  1.112                1.157                1.799                     0.029              1.147                6.590            167.054            172.580
+ 201                     0.100                  96.135                99.577                  90.237                97.485                 0.004                  0.919                0.903                0.995                     0.018              0.845                4.476             89.839            145.501
+ 212                     3.653                  80.924                96.917                  40.184                69.534                 0.723                 -4.076               -3.887               -1.963                    -1.247              1.899               11.449            549.234            152.631
+ 344                     0.002                 100.000               100.000                 100.000               100.000                 0.000                 -0.579               -0.579                0.169                       NaN              0.435                0.241              2.265              1.669
+
+5. Pencereler arasi ozet: fark % = yontem - referans; medyan [en kucuk, en buyuk]; daha iyi = farki < 0 olan pencere sayisi; p = Wilcoxon (aciklayici)
+  agirlik vs ECT     akis    tum       n=12    +0.006  [  -1.376,  +24.569]  daha iyi 5/12  p=0.929
+  agirlik vs ECT     bekleme tum       n=11    -2.681  [ -70.017,  +44.049]  daha iyi 6/11  p=0.203
+  agirlik vs ECT     islem   tum       n=12    +0.141  [  -0.034,   +5.307]  daha iyi 2/12  p=0.0128
+  agirlik vs ECT     bsld    tum       n=12    -0.000  [ -38.206,  +79.247]  daha iyi 6/12  p=0.929
+    yerel vs ECT     akis    tum       n=12    +0.006  [  -1.460,  +24.503]  daha iyi 5/12  p=0.79
+    yerel vs ECT     bekleme tum       n=11    -2.584  [ -70.017,  +43.874]  daha iyi 6/11  p=0.203
+    yerel vs ECT     islem   tum       n=12    +0.310  [  -0.034,   +5.347]  daha iyi 1/12  p=0.00765
+    yerel vs ECT     bsld    tum       n=12    -0.000  [ -38.206,  +58.053]  daha iyi 6/12  p=0.79
+    kesin vs ECT     akis    tum       n=12    +0.000  [  -1.471,  +24.097]  daha iyi 5/12  p=0.959
+    kesin vs ECT     akis    guvenilir n= 4    -0.003  [  -1.294,   +0.016]  daha iyi 2/4  p=nan
+    kesin vs ECT     bekleme tum       n=11    -3.153  [ -65.344,  +43.310]  daha iyi 7/11  p=0.139
+    kesin vs ECT     bekleme guvenilir n= 3    -3.450  [ -65.344,   -0.338]  daha iyi 3/3  p=nan
+    kesin vs ECT     islem   tum       n=12    +0.082  [  -0.083,   +5.098]  daha iyi 2/12  p=0.0218
+    kesin vs ECT     islem   guvenilir n= 4    +0.008  [  -0.003,   +1.250]  daha iyi 1/4  p=nan
+    kesin vs ECT     bsld    tum       n=12    -0.331  [ -38.763,  +69.905]  daha iyi 6/12  p=0.878
+    kesin vs ECT     bsld    guvenilir n= 4    -0.740  [ -38.763,   +0.000]  daha iyi 3/4  p=nan
+     fcfs vs ECT     akis    tum       n=12    +0.003  [  -2.032,  +34.399]  daha iyi 4/12  p=0.285
+     fcfs vs ECT     bekleme tum       n=11    +0.000  [ -58.816,  +77.762]  daha iyi 5/11  p=0.721
+     fcfs vs ECT     islem   tum       n=12    +0.140  [  +0.000,   +7.909]  daha iyi 0/12  p=0.00506
+     fcfs vs ECT     bsld    tum       n=12    +0.894  [ -38.540,  +97.940]  daha iyi 4/12  p=0.445
+    yerel vs agirlik akis    tum       n=12    +0.000  [  -0.085,   +0.313]  daha iyi 3/12  p=0.401
+    yerel vs agirlik bekleme tum       n=11    +0.000  [  -0.846,   +1.645]  daha iyi 3/11  p=0.327
+    yerel vs agirlik islem   tum       n=12    +0.000  [  -0.625,   +0.322]  daha iyi 3/12  p=0.575
+    yerel vs agirlik bsld    tum       n=12    +0.000  [ -11.824,   +1.411]  daha iyi 4/12  p=0.575
+    kesin vs agirlik akis    tum       n=12    -0.021  [  -0.491,   +0.313]  daha iyi 8/12  p=0.11
+    kesin vs agirlik akis    guvenilir n= 4    -0.005  [  -0.044,   +0.004]  daha iyi 2/4  p=nan
+    kesin vs agirlik bekleme tum       n=11    +0.000  [  -1.678,  +15.585]  daha iyi 5/11  p=0.445
+    kesin vs agirlik bekleme guvenilir n= 3    +4.947  [  -1.678,  +15.585]  daha iyi 1/3  p=nan
+    kesin vs agirlik islem   tum       n=12    -0.005  [  -0.949,   +0.580]  daha iyi 6/12  p=0.424
+    kesin vs agirlik islem   guvenilir n= 4    -0.023  [  -0.193,   +0.007]  daha iyi 2/4  p=nan
+    kesin vs agirlik bsld    tum       n=12    -0.451  [  -5.212,   +5.694]  daha iyi 6/12  p=0.657
+    kesin vs agirlik bsld    guvenilir n= 4    -0.451  [  -2.444,   +1.095]  daha iyi 2/4  p=nan
+
+==============================================================================================================
+YUK rho = 1.2   (pencere sayisi 12)
+==============================================================================================================
+1. Ortalama akis suresi (sn)
+ gun    is    vm  ECT_akis  agirlik_akis  yerel_akis  kesin_akis  fcfs_akis
+   4 15720  9993   49125.0       49154.0     49154.0     49122.0    49123.0
+  75  8273  1108   15065.0       15310.0     15203.0     15192.0    18097.0
+  81  7703  2500   37037.0       37000.0     37041.0     37044.0    37410.0
+ 126 11826  1180   35788.0       35699.0     35668.0     35716.0    37716.0
+ 134 11744 21158  126367.0      126370.0    126370.0    126363.0   126371.0
+ 170  6782  1356   22326.0       21956.0     21921.0     21760.0    21373.0
+ 177 19826  1224   20430.0       22671.0     22679.0     23072.0    22990.0
+ 186  5131  3576   60551.0       60718.0     60710.0     60678.0    60692.0
+ 194 14957   506    7431.0        7544.0      7573.0      7427.0     7925.0
+ 201 13553   520    4815.0        4759.0      4755.0      4782.0     4896.0
+ 212  7028   700   24568.0       24517.0     24668.0     24949.0    39684.0
+ 344  5079  1707   32992.0       32994.0     32992.0     32949.0    33005.0
+
+2.akis  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_akis_%  fark_yerel_vs_ECT_akis_%  fark_kesin_vs_ECT_akis_%  fark_fcfs_vs_ECT_akis_%
+   4                        0.06                      0.06                     -0.01                    -0.00
+  75                        1.63                      0.91                      0.84                    20.12
+  81                       -0.10                      0.01                      0.02                     1.01
+ 126                       -0.25                     -0.33                     -0.20                     5.39
+ 134                        0.00                      0.00                     -0.00                     0.00
+ 170                       -1.65                     -1.81                     -2.53                    -4.27
+ 177                       10.97                     11.01                     12.93                    12.53
+ 186                        0.28                      0.26                      0.21                     0.23
+ 194                        1.53                      1.91                     -0.06                     6.65
+ 201                       -1.16                     -1.24                     -0.68                     1.69
+ 212                       -0.21                      0.41                      1.55                    61.53
+ 344                        0.01                      0.00                     -0.13                     0.04
+
+2.bekleme  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_bekleme_%  fark_yerel_vs_ECT_bekleme_%  fark_kesin_vs_ECT_bekleme_%  fark_fcfs_vs_ECT_bekleme_%
+   4                         -38.08                       -38.08                       -37.54                      -27.78
+  75                          -4.01                        -8.24                        -2.01                       80.18
+  81                          -3.78                        -2.00                        -0.93                       13.90
+ 126                          -0.64                        -0.73                        -0.57                        7.13
+ 134                          -0.60                        -0.60                        -2.57                       -0.34
+ 170                         -23.76                       -24.62                       -23.58                      -33.77
+ 177                          15.24                        15.28                        17.99                       16.50
+ 186                         -23.08                       -22.52                       -21.28                      -15.81
+ 194                           2.15                         2.92                        -0.40                       10.87
+ 201                          -0.32                        -0.51                         1.17                        6.46
+ 212                          -0.76                        -0.25                         2.03                      101.07
+ 344                          -3.88                        -4.09                        -4.47                        1.29
+
+2.islem  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_islem_%  fark_yerel_vs_ECT_islem_%  fark_kesin_vs_ECT_islem_%  fark_fcfs_vs_ECT_islem_%
+   4                         0.08                       0.08                       0.02                      0.01
+  75                         3.39                       3.78                       1.73                      1.33
+  81                         0.16                       0.16                       0.09                      0.08
+ 126                         0.85                       0.76                       0.85                      0.52
+ 134                         0.00                       0.00                       0.00                      0.00
+ 170                         2.96                       2.95                       1.86                      1.89
+ 177                         1.23                       1.28                       1.40                      3.48
+ 186                         1.14                       1.11                       1.01                      0.83
+ 194                         0.64                       0.46                       0.43                      0.58
+ 201                        -1.63                      -1.65                      -1.73                     -1.01
+ 212                         0.67                       1.44                       0.79                     -0.75
+ 344                         0.03                       0.03                      -0.10                      0.03
+
+2.bsld  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_bsld_%  fark_yerel_vs_ECT_bsld_%  fark_kesin_vs_ECT_bsld_%  fark_fcfs_vs_ECT_bsld_%
+   4                       -0.62                     -0.62                     -0.57                    -0.42
+  75                       70.56                     40.82                     83.78                   356.86
+  81                       -5.64                     -0.07                     -4.03                    47.33
+ 126                        2.70                     -1.14                      1.54                    10.93
+ 134                       -1.42                     -1.42                     -1.36                    -1.15
+ 170                      -44.92                    -40.67                    -41.20                   -52.55
+ 177                        4.34                      5.38                     13.25                    80.72
+ 186                       57.21                     57.16                    -12.15                    53.59
+ 194                       -3.50                      1.67                     -6.90                     5.64
+ 201                        1.55                      1.20                      3.98                    11.84
+ 212                        5.30                     17.86                      3.38                   227.09
+ 344                        1.21                     -0.01                     -1.94                    15.90
+
+3. Kesinlik kapsami
+ gun  kesin_geri_dusus_%  kesin_K_%  kesin_guvenilir  acik_kesin_cozulen_%  acik_bekleyen_medyan
+   4               12.33       0.00            False                 89.20                 135.0
+  75               59.37       0.00            False                 38.26                 732.0
+  81               53.29       3.95            False                 46.90                 636.0
+ 126               87.03       0.00            False                 17.40                3896.0
+ 134                0.00       0.00             True                100.00                  13.0
+ 170               62.17       0.00            False                 44.32                1035.0
+ 177               81.63       0.18            False                 22.17                2348.0
+ 186                0.00       0.00             True                100.00                 152.0
+ 194               73.95       0.00            False                 23.06                1257.5
+ 201               62.76       0.00            False                 40.26                 816.0
+ 212               85.94       0.00            False                 14.36                1813.0
+ 344                0.00       0.00             True                100.00                  58.0
+
+4. Acik dongu (ECT gidisatindaki ayni karar durumlari)
+ gun  acik_tahmini_pay_kesin_%  acik_kapatma_agirlik_%  acik_kapatma_yerel_%  acik_optimal_agirlik_%  acik_optimal_yerel_%  acik_kalan_agirlik_%  acik_gercek_agirlik_%  acik_gercek_yerel_%  acik_gercek_kesin_%  acik_buyuk_pay_agirlik_%  acik_ms_hizli_ort  acik_ms_agirlik_ort  acik_ms_yerel_ort  acik_ms_kesin_ort
+   4                     0.192                 100.000               100.000                 100.000               100.000                 0.000                 -0.956               -0.956                1.022                     0.000              2.473                1.632             16.744             27.756
+  75                     2.256                  95.090                99.994                  58.511                97.461                 0.113                  4.388                4.499                6.080                     5.055              1.040                5.664            189.699            192.856
+  81                     0.217                  85.433               100.000                  72.055               100.000                 0.032                 -0.449               -0.215               -0.116                    -0.179              1.283                6.567            167.626            213.364
+ 126                     5.174                  99.974                99.999                  81.146                98.331                 0.001                  4.862                4.893                5.042                     0.133              4.253               29.197           1994.340             63.446
+ 134                     0.005                 100.000               100.000                 100.000               100.000                 0.000                  0.017                0.017                0.017                       NaN              5.216                1.044             10.501             95.908
+ 170                     5.649                  99.359                99.600                  68.288                68.377                 0.038                 16.113               16.121               16.271                     4.860              1.429                7.963            296.567            108.790
+ 177                     1.334                  99.918                99.994                  85.009                98.170                 0.001                  9.106                9.097                8.912                     0.162              3.495               22.316           1921.338             87.865
+ 186                     0.716                  82.851                97.297                  77.851                80.737                 0.124                  1.201                1.023                1.059                       NaN              1.057                1.197             14.791             35.801
+ 194                     0.876                  98.012                99.496                  49.454                92.258                 0.018                 -0.065               -0.076                0.066                     0.261              1.365                8.134            290.225            101.233
+ 201                     0.879                  99.956                99.985                  89.002                97.363                 0.000                  3.206                3.050                2.903                     0.603              0.897                5.127            124.894            101.995
+ 212                     1.353                  87.135                99.777                  44.537                75.278                 0.176                  1.240                0.764                1.289                    -1.365              2.117               12.981            794.530             62.797
+ 344                     0.003                  98.644                99.441                  95.379                96.165                 0.000                  0.455                0.453                0.161                       NaN              0.442                0.783              8.475             80.964
+
+5. Pencereler arasi ozet: fark % = yontem - referans; medyan [en kucuk, en buyuk]; daha iyi = farki < 0 olan pencere sayisi; p = Wilcoxon (aciklayici)
+  agirlik vs ECT     akis    tum       n=12    +0.004  [  -1.655,  +10.968]  daha iyi 5/12  p=0.733
+  agirlik vs ECT     bekleme tum       n=12    -2.273  [ -38.077,  +15.240]  daha iyi 10/12  p=0.0522
+  agirlik vs ECT     islem   tum       n=12    +0.654  [  -1.635,   +3.388]  daha iyi 1/12  p=0.021
+  agirlik vs ECT     bsld    tum       n=12    +1.378  [ -44.919,  +70.555]  daha iyi 5/12  p=0.47
+    yerel vs ECT     akis    tum       n=12    +0.035  [  -1.813,  +11.009]  daha iyi 3/12  p=0.301
+    yerel vs ECT     bekleme tum       n=12    -1.361  [ -38.077,  +15.278]  daha iyi 10/12  p=0.064
+    yerel vs ECT     islem   tum       n=12    +0.614  [  -1.646,   +3.781]  daha iyi 1/12  p=0.021
+    yerel vs ECT     bsld    tum       n=12    +0.596  [ -40.671,  +57.164]  daha iyi 6/12  p=0.339
+    kesin vs ECT     akis    tum       n=12    -0.005  [  -2.533,  +12.929]  daha iyi 7/12  p=0.91
+    kesin vs ECT     akis    guvenilir n= 3    -0.004  [  -0.132,   +0.209]  daha iyi 2/3  p=nan
+    kesin vs ECT     bekleme tum       n=12    -1.472  [ -37.544,  +17.991]  daha iyi 9/12  p=0.129
+    kesin vs ECT     bekleme guvenilir n= 3    -4.466  [ -21.281,   -2.570]  daha iyi 3/3  p=nan
+    kesin vs ECT     islem   tum       n=12    +0.613  [  -1.727,   +1.864]  daha iyi 2/12  p=0.0522
+    kesin vs ECT     islem   guvenilir n= 3    +0.001  [  -0.101,   +1.007]  daha iyi 1/3  p=nan
+    kesin vs ECT     bsld    tum       n=12    -0.967  [ -41.195,  +83.781]  daha iyi 7/12  p=0.85
+    kesin vs ECT     bsld    guvenilir n= 3    -1.939  [ -12.152,   -1.361]  daha iyi 3/3  p=nan
+     fcfs vs ECT     akis    tum       n=12    +1.346  [  -4.269,  +61.529]  daha iyi 2/12  p=0.0161
+     fcfs vs ECT     bekleme tum       n=12    +6.794  [ -33.774, +101.071]  daha iyi 4/12  p=0.38
+     fcfs vs ECT     islem   tum       n=12    +0.303  [  -1.015,   +3.485]  daha iyi 2/12  p=0.0771
+     fcfs vs ECT     bsld    tum       n=12   +13.870  [ -52.546, +356.860]  daha iyi 3/12  p=0.0269
+    yerel vs agirlik akis    tum       n=12    -0.003  [  -0.699,   +0.616]  daha iyi 6/12  p=0.878
+    yerel vs agirlik bekleme tum       n=12    +0.000  [  -4.412,   +1.859]  daha iyi 5/12  p=0.959
+    yerel vs agirlik islem   tum       n=12    -0.006  [  -0.173,   +0.768]  daha iyi 7/12  p=0.799
+    yerel vs agirlik bsld    tum       n=12    +0.000  [ -17.437,  +11.923]  daha iyi 5/12  p=0.575
+    kesin vs agirlik akis    tum       n=12    -0.036  [  -1.559,   +1.767]  daha iyi 7/12  p=0.91
+    kesin vs agirlik akis    guvenilir n= 3    -0.066  [  -0.138,   -0.006]  daha iyi 3/3  p=nan
+    kesin vs agirlik bekleme tum       n=12    +1.177  [  -2.489,   +2.965]  daha iyi 3/12  p=0.129
+    kesin vs agirlik bekleme guvenilir n= 3    -0.605  [  -1.987,   +2.336]  daha iyi 2/3  p=nan
+    kesin vs agirlik islem   tum       n=12    -0.085  [  -1.606,   +0.160]  daha iyi 9/12  p=0.0923
+    kesin vs agirlik islem   guvenilir n= 3    -0.134  [  -0.135,   -0.002]  daha iyi 3/3  p=nan
+    kesin vs agirlik bsld    tum       n=12    +0.052  [ -44.120,   +8.537]  daha iyi 5/12  p=0.791
+    kesin vs agirlik bsld    guvenilir n= 3    -3.113  [ -44.120,   +0.060]  daha iyi 2/3  p=nan
+
+==============================================================================================================
+YUK rho = 2.0   (pencere sayisi 12)
+==============================================================================================================
+1. Ortalama akis suresi (sn)
+ gun    is    vm  ECT_akis  agirlik_akis  yerel_akis  kesin_akis  fcfs_akis
+   4 15720  5996   53243.0       53248.0     53248.0     53344.0    53368.0
+  75  8273   665   22844.0       21530.0     21456.0     21619.0    34573.0
+  81  7703  1500   65625.0       65402.0     65415.0     65469.0    72367.0
+ 126 11826   707   63910.0       63758.0     63835.0     63788.0    67834.0
+ 134 11744 12695  146047.0      145880.0    145880.0    145817.0   145977.0
+ 170  6782   814   58507.0       55699.0     55688.0     59343.0    67225.0
+ 177 19826   734   39832.0       42854.0     42755.0     42459.0    52798.0
+ 186  5131  2146   70164.0       69267.0     69331.0     69306.0    69961.0
+ 194 14957   304   22134.0       21890.0     22113.0     21888.0    19510.0
+ 201 13553   313    7791.0        8042.0      8044.0      7901.0    11984.0
+ 212  7028   420   41872.0       41690.0     42297.0     41929.0    75034.0
+ 344  5079  1024   44564.0       41404.0     41459.0     41540.0    43258.0
+
+2.akis  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_akis_%  fark_yerel_vs_ECT_akis_%  fark_kesin_vs_ECT_akis_%  fark_fcfs_vs_ECT_akis_%
+   4                        0.01                      0.01                      0.19                     0.23
+  75                       -5.75                     -6.08                     -5.36                    51.34
+  81                       -0.34                     -0.32                     -0.24                    10.27
+ 126                       -0.24                     -0.12                     -0.19                     6.14
+ 134                       -0.11                     -0.11                     -0.16                    -0.05
+ 170                       -4.80                     -4.82                      1.43                    14.90
+ 177                        7.59                      7.34                      6.59                    32.55
+ 186                       -1.28                     -1.19                     -1.22                    -0.29
+ 194                       -1.10                     -0.10                     -1.11                   -11.86
+ 201                        3.23                      3.25                      1.41                    53.82
+ 212                       -0.44                      1.01                      0.13                    79.20
+ 344                       -7.09                     -6.97                     -6.78                    -2.93
+
+2.bekleme  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_bekleme_%  fark_yerel_vs_ECT_bekleme_%  fark_kesin_vs_ECT_bekleme_%  fark_fcfs_vs_ECT_bekleme_%
+   4                         -36.80                       -36.80                       -32.43                      -23.98
+  75                           2.70                         1.16                         2.42                      159.04
+  81                          -0.50                        -0.41                        -0.46                       21.06
+ 126                          -0.42                        -0.24                        -0.36                        7.12
+ 134                          -3.86                        -3.86                        -3.86                       -3.86
+ 170                          -8.16                        -7.87                         1.13                       20.34
+ 177                           8.84                         8.57                         7.65                       38.24
+ 186                         -30.96                       -28.56                       -29.23                      -24.88
+ 194                          -1.49                        -0.32                        -1.50                      -14.26
+ 201                          -3.77                        -2.55                        -4.65                       88.45
+ 212                          -0.80                         1.05                        -0.01                      102.67
+ 344                         -38.68                       -37.95                       -37.75                      -17.73
+
+2.islem  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_islem_%  fark_yerel_vs_ECT_islem_%  fark_kesin_vs_ECT_islem_%  fark_fcfs_vs_ECT_islem_%
+   4                         0.30                       0.30                       0.44                      0.42
+  75                       -10.78                     -10.38                      -9.99                    -12.65
+  81                        -0.20                      -0.25                      -0.04                      0.77
+ 126                         0.77                       0.60                       0.74                      0.61
+ 134                        -0.05                      -0.05                      -0.09                      0.02
+ 170                         2.08                       1.42                       2.05                      3.78
+ 177                         0.99                       0.82                       1.04                      2.58
+ 186                         3.08                       2.83                       2.89                      3.32
+ 194                         1.37                       1.34                       1.37                      3.50
+ 201                        13.56                      11.82                      10.36                      2.71
+ 212                         0.79                       0.89                       0.61                      0.56
+ 344                         0.88                       0.85                       1.03                      0.80
+
+2.bsld  ECT'ye gore fark (%)
+ gun  fark_agirlik_vs_ECT_bsld_%  fark_yerel_vs_ECT_bsld_%  fark_kesin_vs_ECT_bsld_%  fark_fcfs_vs_ECT_bsld_%
+   4                       -3.00                     -3.00                     -3.34                    -0.84
+  75                       10.80                      6.30                     12.38                   708.79
+  81                       -1.98                     -8.34                     -2.88                   108.49
+ 126                        2.01                     -0.80                      1.65                    11.61
+ 134                       -2.95                     -2.95                     -2.95                    -2.60
+ 170                       -2.47                     -2.22                     -2.22                    12.12
+ 177                        3.16                      5.75                      2.12                   238.71
+ 186                      -34.92                    -31.77                    -39.40                   -38.82
+ 194                       10.84                      9.94                      6.05                   -24.03
+ 201                      -21.16                    -19.40                    -20.29                    76.26
+ 212                       15.10                     16.59                      2.57                   285.40
+ 344                      -87.29                    -86.95                    -88.93                   -69.79
+
+3. Kesinlik kapsami
+ gun  kesin_geri_dusus_%  kesin_K_%  kesin_guvenilir  acik_kesin_cozulen_%  acik_bekleyen_medyan
+   4               30.47       0.00            False                 67.81                 288.0
+  75               83.79       0.00            False                 15.60                1244.0
+  81               81.35       3.84            False                 19.07                2931.0
+ 126               88.05       0.00            False                 13.78                4606.5
+ 134               60.88       0.00            False                 38.83                 708.0
+ 170               73.23       0.00            False                 27.92                2237.0
+ 177               92.07       0.00            False                  8.43                3755.0
+ 186                1.06       0.00            False                 98.99                 410.0
+ 194               89.48       0.00            False                 10.58                2418.0
+ 201               78.18       0.00            False                 22.08                1358.0
+ 212               88.95       0.00            False                 11.53                2228.0
+ 344               30.31       2.82            False                 56.48                 510.0
+
+4. Acik dongu (ECT gidisatindaki ayni karar durumlari)
+ gun  acik_tahmini_pay_kesin_%  acik_kapatma_agirlik_%  acik_kapatma_yerel_%  acik_optimal_agirlik_%  acik_optimal_yerel_%  acik_kalan_agirlik_%  acik_gercek_agirlik_%  acik_gercek_yerel_%  acik_gercek_kesin_%  acik_buyuk_pay_agirlik_%  acik_ms_hizli_ort  acik_ms_agirlik_ort  acik_ms_yerel_ort  acik_ms_kesin_ort
+   4                     0.517                 100.000               100.000                 100.000               100.000                -0.000                 -0.708               -0.708               -0.215                     1.197              1.853                3.132             32.998            219.080
+  75                     2.437                  91.847                93.520                  38.256                59.544                 0.204                 11.794               12.160               12.163                     3.304              1.596                9.543            389.440             78.267
+  81                     0.727                  99.165                99.970                  85.176                91.920                 0.006                  2.861                3.012                1.929                    -2.027              2.831               18.812           1071.209             91.043
+ 126                     5.013                  98.577                99.379                  51.423                51.423                 0.075                  4.985                5.048                4.956                    -0.009              4.542               29.186           3039.241             42.169
+ 134                     0.000                 100.000               100.000                 100.000               100.000                -0.000                 -0.007               -0.007                0.000                     0.094              3.645                5.844             64.079             56.553
+ 170                     2.096                  97.825                99.349                  74.497                96.381                 0.047                  4.204                4.047                5.288                    -0.627              2.465               14.433           1239.528             42.524
+ 177                     0.079                  99.948                99.999                  96.606                99.781                 0.000                 -0.249               -0.248               -0.122                    -0.495              4.726               30.434           3468.022             23.621
+ 186                     2.744                  75.349                97.506                  19.163                38.816                 0.696                  0.300                0.245                0.497                     3.143              0.814                2.513             53.096           1182.501
+ 194                     1.407                  97.915                99.885                  37.325                85.924                 0.030                  1.344                1.329                1.420                    -0.596              2.307               13.447           1191.406             31.999
+ 201                     2.669                  99.868                99.980                  70.488                95.552                 0.004                  7.127                7.131                7.258                     1.123              1.310                7.618            332.285             49.814
+ 212                     1.688                  81.861                96.892                  48.272                61.663                 0.311                  1.451                1.013                2.775                    -1.359              2.417               14.161           1087.340             28.833
+ 344                     1.266                  99.478                99.887                  57.256                63.205                 0.007                  8.420                9.496               10.099                     1.638              0.818                4.072             81.176            303.896
+
+5. Pencereler arasi ozet: fark % = yontem - referans; medyan [en kucuk, en buyuk]; daha iyi = farki < 0 olan pencere sayisi; p = Wilcoxon (aciklayici)
+  agirlik vs ECT     akis    tum       n=12    -0.388  [  -7.090,   +7.586]  daha iyi 9/12  p=0.176
+  agirlik vs ECT     bekleme tum       n=12    -2.631  [ -38.684,   +8.838]  daha iyi 10/12  p=0.0522
+  agirlik vs ECT     islem   tum       n=12    +0.836  [ -10.777,  +13.558]  daha iyi 3/12  p=0.0522
+  agirlik vs ECT     bsld    tum       n=12    -2.222  [ -87.287,  +15.101]  daha iyi 7/12  p=0.622
+    yerel vs ECT     akis    tum       n=12    -0.116  [  -6.967,   +7.337]  daha iyi 8/12  p=0.38
+    yerel vs ECT     bekleme tum       n=12    -1.479  [ -37.946,   +8.574]  daha iyi 9/12  p=0.11
+    yerel vs ECT     islem   tum       n=12    +0.836  [ -10.376,  +11.820]  daha iyi 3/12  p=0.0522
+    yerel vs ECT     bsld    tum       n=12    -2.585  [ -86.952,  +16.594]  daha iyi 8/12  p=0.424
+    kesin vs ECT     akis    tum       n=12    -0.174  [  -6.785,   +6.594]  daha iyi 7/12  p=0.622
+    kesin vs ECT     bekleme tum       n=12    -0.983  [ -37.747,   +7.648]  daha iyi 9/12  p=0.129
+    kesin vs ECT     islem   tum       n=12    +0.885  [  -9.988,  +10.365]  daha iyi 3/12  p=0.0522
+    kesin vs ECT     bsld    tum       n=12    -2.553  [ -88.933,  +12.377]  daha iyi 7/12  p=0.266
+     fcfs vs ECT     akis    tum       n=12    +8.206  [ -11.855,  +79.198]  daha iyi 4/12  p=0.064
+     fcfs vs ECT     bekleme tum       n=12   +13.732  [ -24.884, +159.036]  daha iyi 5/12  p=0.233
+     fcfs vs ECT     islem   tum       n=12    +0.786  [ -12.648,   +3.776]  daha iyi 1/12  p=0.0342
+     fcfs vs ECT     bsld    tum       n=12   +11.865  [ -69.787, +708.791]  daha iyi 5/12  p=0.176
+    yerel vs agirlik akis    tum       n=12    +0.022  [  -0.344,   +1.457]  daha iyi 3/12  p=0.241
+    yerel vs agirlik bekleme tum       n=12    +0.246  [  -1.505,   +3.480]  daha iyi 2/12  p=0.0926
+    yerel vs agirlik islem   tum       n=12    -0.039  [  -1.531,   +0.450]  daha iyi 8/12  p=0.114
+    yerel vs agirlik bsld    tum       n=12    +0.129  [  -6.492,   +4.846]  daha iyi 4/12  p=0.959
+    kesin vs agirlik akis    tum       n=12    +0.080  [  -1.760,   +6.542]  daha iyi 4/12  p=0.266
+    kesin vs agirlik bekleme tum       n=12    +0.049  [  -1.094,  +10.112]  daha iyi 4/12  p=0.182
+    kesin vs agirlik islem   tum       n=12    -0.012  [  -2.812,   +0.884]  daha iyi 6/12  p=0.97
+    kesin vs agirlik bsld    tum       n=12    -0.641  [ -12.949,   +1.428]  daha iyi 9/12  p=0.0923
+
+==============================================================================================================
+6. Karar basina hesaplama suresi (ms): pencere ortalamalarinin / p95'lerinin pencereler arasi medyani
+   kapsam kesin = kesin cozulen, K siniri baglayici olmayan kararlar (butun yontemler icin ayni karar kumesi);
+   K = K siniri baglayici; geri = bekleyen > cap; tum = butun olculen kararlar (karma politikanin maliyeti).
+   yerel_politika = ECT + yerel (agirlik dahil); kesin_politika = ECT + agirlik + cozucu; kesin_cozucu = yalniz cozucu.
+==============================================================================================================
+  kapsam = kesin
+ rho  pencere  karar  ECT_ort_ms  ECT_p95_ms  agirlik_ort_ms  agirlik_p95_ms  yerel_politika_ort_ms  yerel_politika_p95_ms  kesin_cozucu_ort_ms  kesin_cozucu_p95_ms  kesin_politika_ort_ms  kesin_politika_p95_ms
+ 0.8       12  30551        0.62        1.18            1.03            3.53                  13.48                  47.10               166.13               763.10                 167.59                 767.13
+ 1.2       12  31106        0.50        1.00            1.22            3.78                  16.90                  58.95               309.02              1168.33                 310.51                1172.97
+ 2.0       12  25177        0.40        0.81            1.51            3.77                  25.45                  87.97               304.27              1549.49                 306.04                1553.77
+
+  kapsam = K
+ rho  pencere  karar  ECT_ort_ms  ECT_p95_ms  agirlik_ort_ms  agirlik_p95_ms  yerel_politika_ort_ms  yerel_politika_p95_ms  kesin_cozucu_ort_ms  kesin_cozucu_p95_ms  kesin_politika_ort_ms  kesin_politika_p95_ms
+ 1.2        1     64        1.24        1.91            4.29            5.82                  82.31                 137.55              1800.66              3443.24                1806.20                3450.40
+ 2.0        1     46        0.74        1.19            2.10            2.71                  23.02                  30.01               193.50               243.54                 196.34                 246.55
+
+  kapsam = geri
+ rho  pencere  karar  ECT_ort_ms  ECT_p95_ms  agirlik_ort_ms  agirlik_p95_ms  yerel_politika_ort_ms  yerel_politika_p95_ms  kesin_cozucu_ort_ms  kesin_cozucu_p95_ms  kesin_politika_ort_ms  kesin_politika_p95_ms
+ 0.8        9  36740        1.80        2.79            9.56           16.67                 244.69                 670.48                  0.0                  0.0                  11.51                  19.43
+ 1.2        9  56019        2.13        3.47           11.64           18.44                 368.42                1041.88                  0.0                  0.0                  13.48                  21.48
+ 2.0       12  83902        2.62        4.94           12.91           26.90                 842.39                1754.03                  0.0                  0.0                  15.09                  31.23
+
+  kapsam = tum
+ rho  pencere  karar  ECT_ort_ms  ECT_p95_ms  agirlik_ort_ms  agirlik_p95_ms  yerel_politika_ort_ms  yerel_politika_p95_ms  kesin_cozucu_ort_ms  kesin_cozucu_p95_ms  kesin_politika_ort_ms  kesin_politika_p95_ms
+ 0.8       12  67291        1.25        2.38            2.89           11.60                  60.21                 288.05                59.18               215.77                  77.21                 218.32
+ 1.2       12  87189        1.40        3.14            6.12           16.65                 179.82                 668.43                91.89               494.97                 105.09                 498.67
+ 2.0       12 109125        2.36        4.92           11.49           26.31                 732.54                1654.16                53.18               350.91                  70.97                 356.42
+
+==============================================================================================================
+7. Duyarlilik analizi: [4, 134] cikarilmis (sonuclar goruldukten sonra eklenen ek analiz)
+   ECT'ye gore akis farki (%), tam hassasiyetli pencere degerlerinden; daha_iyi = fark < 0 olan pencere;
+   esit = fark tam olarak 0 olan pencere. Cikarma butun yontemlere ayni bicimde uygulanir.
+==============================================================================================================
+             n_tum  medyan_%_tum  daha_iyi_tum  esit_tum  n_haric  medyan_%_haric  daha_iyi_haric  esit_haric
+rho yontem                                                                                                   
+0.8 agirlik     12        0.0062             5         1       10          0.0256               4           0
+    fcfs        12        0.0027             4         2       10          0.1378               4           0
+    kesin       12        0.0000             5         2       10          0.0055               5           0
+    yerel       12        0.0062             5         1       10          0.0279               4           0
+1.2 agirlik     12        0.0043             5         0       10         -0.0471               5           0
+    fcfs        12        1.3460             2         0       10          3.5372               1           0
+    kesin       12       -0.0054             7         0       10         -0.0188               5           0
+    yerel       12        0.0348             3         0       10          0.1370               3           0
+2.0 agirlik     12       -0.3882             9         0       10         -0.7700               8           0
+    fcfs        12        8.2062             4         0       10         12.5873               3           0
+    kesin       12       -0.1745             7         0       10         -0.2150               6           0
+    yerel       12       -0.1160             8         0       10         -0.2191               7           0
+
