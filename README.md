@@ -98,17 +98,6 @@ python durum_anlik.py --kok kayip177_gonderim --gun 177 --rho 0.8,1.2,2.0 --saat
 Seed 0 uses the actual runtimes of the trace; seeds 1 and 2 perturb them multiplicatively
 (log-normal, standard deviation 0.01). Estimates, arrivals and machines are unchanged across seeds.
 
-## Where the results are
-
-| Result | Source |
-|---|---|
-| Accuracy of the submission-time estimates | `results/tahmin_gonderim_rapor.txt` |
-| Open-loop measures: exact-reference share, waiting jobs, closure, exact match, realized gain | `test_gonderim/test_raporu.txt`, sections 3–4; summarized as medians [min, max] across windows. Closure is not computed when the estimated gain of the exact plan over ECT is below 0.001% (`kural_ozet.KAPATMA_ESIK_PCT`). |
-| Computational cost | `test_gonderim/test_raporu.txt`, section 6; `test_maliyet.csv` |
-| Closed-loop comparison and variation across windows | `test_gonderim/test_raporu.txt`, sections 1–3 and 5; `test_pencereler_arasi.csv` |
-| Sensitivity to the estimate source | `results/test_raporu_kayit.txt` compared with `results/test_raporu_gonderim.txt` |
-| Analysis of day 177 | `results/kayip_raporu.txt`, `results/durum_raporu.txt` |
-
 ## License
 
 Code: MIT License (see `LICENSE`). Result reports: CC BY 4.0.
